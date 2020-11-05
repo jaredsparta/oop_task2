@@ -1,3 +1,6 @@
+# A Menu object is basically just a list of Item objects
+# The menu.dictionary allows me to link an Item object with its name
+
 from item import Item
 
 class Menu(Item):
@@ -6,6 +9,8 @@ class Menu(Item):
         self.dictionary = {}
 
     # Adds an item to the menu
+    # When it does, I also add the name of the item as a key and
+    # the item object as the value
     def add_item(self, name, price):
         item_to_add = Item(name, price)
         self.menu.append(item_to_add)
