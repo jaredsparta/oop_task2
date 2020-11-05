@@ -1,4 +1,3 @@
-from menu import Menu
 
 class Waiter(Menu):
     def __init__(self, menu, name = "Waiter"):
@@ -11,8 +10,9 @@ class Waiter(Menu):
         self.menu.list_menu()
 
 
-    def add_order(self, item):
+    def add_order(self, item, number):
         self.orders.append(item)
+        item.ordered(number)
         
 
     def check_orders(self):
