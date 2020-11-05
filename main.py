@@ -42,8 +42,9 @@ while True:
         if order.title() in Jared.menu.dictionary:
             Jared.add_order(Jared.menu.dictionary[order.title()])
             print(f"You have ordered {order.title()}")
+            continue
         else:
-            print("Sorry, we don't have that")
+            print("Sorry, we don't have that. Please refer to the menu.")
             continue
     
     # Checks the orders you've made and how much it costs
